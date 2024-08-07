@@ -60,6 +60,20 @@ const Home = async () => {
         </div>
 
         {/* AGENDAMENTO */}
+        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">Agendamentos</h2>
+        <Card>
+          <CardContent className="flex justify-between p-0">
+            {/* ESQUERDA */}
+            <div className="flex flex-col gap-2 py-5 pl-5"></div>
+            {/* DIREITA */}
+            <div className="flex flex-col items-center justify-center border-l-2 border-solid px-5">
+              <p className="text-sm">Agosto</p>
+              <p className="text-2xl">05</p>
+              <p className="text-sm">20:00</p>
+            </div>
+          </CardContent>
+        </Card>
+        
         <BookingItem />
 
         <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
@@ -79,20 +93,6 @@ const Home = async () => {
             <BarbershopItem key={barbershop.id} barbershop={barbershop} />
           ))}
         </div>
-        <Card className="mt-6">
-          <CardContent className="flex justify-between p-0">
-            {/* ESQUERDA */}
-            <div className="flex flex-col gap-2 py-5 pl-5"></div>
-            {/* DIREITA */}
-            <div className="flex flex-col items-center justify-center border-l-2 border-solid px-5">
-              <p className="text-sm">Agosto</p>
-              <p className="text-2xl">05</p>
-              <p className="text-sm">20:00</p>
-            </div>
-
-
-          </CardContent>
-        </Card>
       </div>
     </div>
   )
