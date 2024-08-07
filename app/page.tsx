@@ -39,14 +39,14 @@ const Home = async () => {
           {quickSearchOptions.map((option) => (
             <Button className="gap-2" variant="secondary" key={option.title}>
               <Image
-                src={option.imageUrl}
+                src={"/acabamento.svg"}
                 width={16}
                 height={16}
-                alt={option.title}
+                alt={"Acabamento"}
               />
-              {option.title}
-            </Button>
-          ))}
+              {Acabamento}
+            </Button> 
+            ))}
         </div>
 
         {/* IMAGEM */}
@@ -94,6 +94,12 @@ const Home = async () => {
           ))}
         </div>
       </div>
+      <footer>
+      <Card>
+          <CardContent className="px-5 py-6">
+            <p className="text-sm text-gray-400">₢ 2024 Copyright <span className="font-bold">FSW Barber</span></p></CardContent>
+      </Card>
+      </footer>
     </div>
   )
 }
