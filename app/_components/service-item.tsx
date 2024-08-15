@@ -20,7 +20,7 @@ import { useSession } from "next-auth/react"
 import { toast } from "sonner"
 import { getBookings } from "../_actions/get-bookings"
 import { Dialog, DialogContent } from "./ui/dialog"
-import SignInDialog from "./sign-in-dialog"
+import SignInDialog from "./sing-in-dialog"
 
 interface ServiceItemProps {
   service: BarbershopService
