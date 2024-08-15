@@ -3,9 +3,6 @@ import { AuthOptions } from "next-auth";
 import { db } from "./prisma";
 import { Adapter } from "next-auth/adapters";
 import GoogleProvider from "next-auth/providers/google"
-//import { Session } from "inspector";
-import { id } from "date-fns/locale";
-import { Session } from "inspector";
 
 export const authOptions: AuthOptions = {
     adapter: PrismaAdapter(db) as Adapter,
