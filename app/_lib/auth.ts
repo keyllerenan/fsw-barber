@@ -3,8 +3,9 @@ import { AuthOptions } from "next-auth";
 import { db } from "./prisma";
 import { Adapter } from "next-auth/adapters";
 import GoogleProvider from "next-auth/providers/google"
-import { Session } from "inspector";
+//import { Session } from "inspector";
 import { id } from "date-fns/locale";
+import { Session } from "inspector";
 
 export const authOptions: AuthOptions = {
     adapter: PrismaAdapter(db) as Adapter,
@@ -15,13 +16,13 @@ export const authOptions: AuthOptions = {
 }),
 ],
 callbacks: {
-    async session ({session: user}) {
-        session.user = {
-            ...session.user,
+    /*async session ({session: user}) {
+        Session.user = {
+            ...Session.user,
             id: user.id,
         } as any
         return session
-    },
+    }, */
 },
 secret: process.env.NEXT_AUTH_SECRET,
 }
